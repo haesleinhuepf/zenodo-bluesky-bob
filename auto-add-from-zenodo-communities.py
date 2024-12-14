@@ -73,11 +73,25 @@ def main():
                 data['submission_date'] = datetime.now().isoformat()
                 #name = data["name"]
 
-                if False:
-                    # formulate bluesky post
-                    post = formulate_post(data["first_author"], data["name"], data["description"])
-                    data['bluesky_post'] = post
-                    log.append(f"* {post} [{url}]({url})")
+
+                # formulate bluesky post
+                post = formulate_post(data["first_author"], data["name"], data["description"])
+                data['bluesky_post'] = post
+                log.append(f"* {post} [{url}]({url})")
+
+                # download first page of PDF
+                filename = download_image_from_record(data["id"])
+                if filename is not None:
+                    data["bluesky_image"] = filename
+
+                    # upload file to github
+                    with open(filename, 'rb') as f:
+                        file_content = f.read()
+                        write_file(repository, branch, filename, file_content,
+                                                                  "Added image for Zenodo record " + data["id"])
+                else:
+                    print("Could not make image from PDF")
+
                 new_data.append(data)
 
                 # deal with entries listed in multiple communities
@@ -117,6 +131,82 @@ Now, formulate a 100 character short tweet, enthusiastically mentioning the auth
     return post_text
 
 
+def download_image_from_record(record_id):
+    """
+    If the license is CC-BY 4.0, download the first file from a Zenodo record and save the first page as PNG. This does only work if it is a PDF file.
+
+    Adepted from: https://github.com/nfDI4BIOIMAGE/training/
+    Licensed BSD-3 by Mara Lampert and Robert Haase
+    """
+    from pdf2image import convert_from_bytes
+    from io import BytesIO
+    import requests
+
+    # Fetch record metadata
+    url = f"https://zenodo.org/api/records/{record_id}"
+    response = requests.get(url)
+    response.raise_for_status()
+    data = response.json()
+
+    # Check if license is CC-BY-4.0
+    license_info = data.get('metadata', {}).get('license', {}).get('id', '')
+    print(f"License info from Zenodo: '{license_info}'")
+    if license_info.lower() != "cc-by-4.0":
+        print("Reuse not allowed: License is not CC-BY 4.0.")
+        return None
+
+    # Get the first PDF file's download link and file name
+    for file_info in data['files']:
+        if file_info['key'].endswith('pdf'):
+            file_url = file_info['links']['self']
+            file_name = file_info['key']
+
+            # Download the file content
+            response = requests.get(file_url)
+            response.raise_for_status()
+            file_content = BytesIO(response.content)
+
+            # Check file extension and convert based on that
+            file_extension = os.path.splitext(file_name)[1].lower()
+            date = datetime.now().strftime("%Y%m%d")
+
+            if file_extension == '.pdf':
+                # Convert first page of PDF to PNG
+                pages = convert_from_bytes(file_content.getvalue())
+                img = pages[0]
+                img = resize_image(img, height=500)
+                filename = f'images/{date}_first_page_{record_id}.png'
+                img.save(filename, 'PNG')
+                print("First page of PDF saved as PNG.")
+                return filename
+
+            else:
+                print(f"Unsupported file type: {file_extension}")
+
+    return None
+
+
+def resize_image(image, height):
+    """
+    Resize the image to the specified height while maintaining aspect ratio.
+
+    Parameters
+    ----------
+    image : PIL.Image.Image
+        The image to resize.
+    height : int
+        The desired height in pixels.
+
+    Returns
+    -------
+    PIL.Image.Image
+        The resized image.
+    """
+    from PIL import Image
+
+    aspect_ratio = image.width / image.height
+    new_width = int(aspect_ratio * height)
+    return image.resize((new_width, height), Image.Resampling.LANCZOS)
 
 
 if __name__ == "__main__":
