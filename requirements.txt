@@ -5,3 +5,4 @@ pyyaml
 numpy
 pygithub
 toolz
+pdf2image
