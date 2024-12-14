@@ -46,3 +46,82 @@ resources:
   url:
   - https://zenodo.org/records/14234608
   - https://doi.org/10.5281/zenodo.14234608
+- authors:
+  - Boissonnet, Tom
+  - Hagen, Bettina
+  - Kunis, Susanne
+  - Schmidt, Christian
+  - Weidtkamp-Peters, Stefanie
+  first_author: Boissonnet, Tom
+  license: cc-by-4.0
+  name: '[Workshop Material] Fit for OMERO - How imaging facilities and IT departments
+    work together to enable RDM for bioimaging, October 16-17, 2024, Heidelberg'
+  publication_date: '2024-11-18'
+  submission_date: '2024-12-14T13:00:13.116926'
+  url:
+  - https://zenodo.org/records/14178789
+  - https://doi.org/10.5281/zenodo.14178789
+- authors:
+  - Engel, Judith
+  - Helling, Patrick
+  - Herrenbrück, Robert
+  - Lemaire, Marina
+  - Mehrtens, Hela
+  - Schmidt, Marcus
+  - Stellmacher, Martha
+  - Weimer, Lukas
+  - Wiljes, Cord
+  - Zinke, Wolf
+  first_author: Engel, Judith
+  license: cc-by-4.0
+  name: Working Group Charter. RDM Helpdesk Network
+  publication_date: '2024-11-04'
+  submission_date: '2024-12-14T13:00:39.417239'
+  url:
+  - https://zenodo.org/records/14035822
+  - https://doi.org/10.5281/zenodo.14035822
+- authors:
+  - Zobel, Thomas
+  - Wendt, Jens
+  description: 'This Excel Workbook contains some simple Macros to help with the generation
+    of a .csv in the necessary format for Key-Value pair annotations of images in
+    OMERO.
+
+    The format is tailored for the OMERO.web script&nbsp;"KeyVal_from_csv.py"&nbsp;
+    (from the version &lt;=5.8.3 of the core omero-scripts).
+
+    Attached is also a video of Thomas Zobel, the head of the imaging core facility
+    Uni M&uuml;nster, showcasing the use of the Excel workbook.The video uses a slightly
+    older version of the workbook and OMERO, but the core functionality remains unchanged.
+
+    Please keep in mind, that the OMERO.web script(s) to handle Key-Value Pairs from/to
+    .csv files will undergo a major change very soon.This might break the compatibility
+    with the format used now for the generated .csv from the workbook.'
+  first_author: Zobel, Thomas
+  license: cc-by-4.0
+  name: Excel template for adding Key-Value Pairs to images
+  publication_date: '2024-10-30'
+  submission_date: '2024-12-14T13:12:27.820454'
+  url:
+  - https://zenodo.org/records/14014252
+  - https://doi.org/10.5281/zenodo.14014252
+- authors:
+  - Wetzker, Cornelia
+  description: 'The poster introduces the consortium NFDI4BIOIMAGE with its central
+    objectives, provides an overview of challenges in bioimage data handling, sharing
+    and analysis and lists support options by the consortium through its data stewardship
+    team.
+
+    It is part of the work of the German consortium NFDI4BIOIMAGE funded by the Deutsche
+    Forschungsgemeinschaft (DFG grant number NFDI 46/1, project number 501864659)
+    and has been presented at the conference FDM@Campus held in G&ouml;ttingen September
+    23-25, 2024.'
+  first_author: Wetzker, Cornelia
+  license: cc-by-4.0
+  name: 'New Kid on the (NFDI) Block: NFDI4BIOIMAGE  - A National Initiative for FAIR
+    Data Management in Bioimaging and Bioimage Analysis'
+  publication_date: '2024-10-29'
+  submission_date: '2024-12-14T13:19:14.646888'
+  url:
+  - https://zenodo.org/records/14006558
+  - https://doi.org/10.5281/zenodo.14006558

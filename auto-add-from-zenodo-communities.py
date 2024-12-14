@@ -1,5 +1,6 @@
 import sys
 from _github_utilities import create_branch, get_file_in_repository, get_issue_body, write_file, send_pull_request, get_pull_requests_count
+from _data_utilities import load_dataframe, all_content, write_yaml_file, complete_zenodo_data, read_yaml_file
 import yaml
 import os
 import requests
@@ -25,6 +26,7 @@ def main():
     repository = "haesleinhuepf/zenodo-bluesky-bob" #TODO sys.argv[1]
     if get_pull_requests_count(repository) > 0:
         print("Leaving because former PR not processed yet.")
+        return
 
     token = os.getenv('ZENODO_API_KEY')
     communities = ['nfdi4bioimage', 'gerbi', 'euro-bioimaging', 'neubias', 'bio-formats', 'globias', 'rdm4mic']
@@ -71,6 +73,10 @@ def main():
                 data['submission_date'] = datetime.now().isoformat()
                 name = data["name"]
                 log.append(f"* [{name}]({url})")
+
+                # formulate bluesky post
+                data['bluesky_post'] = formulate_post(data["first_author"], data["name"], data["description"])
+                
                 new_data.append(data)
 
                 # deal with entries listed in multiple communities
@@ -79,14 +85,14 @@ def main():
         break
 
     # save data in repository
-    #TODO zenodo_yml = yaml.dump(new_data)
-    #TODO file_content = get_file_in_repository(repository, branch, yml_filename).decoded_content.decode()
-    #TODO print("yml file content length:", len(file_content))
+    zenodo_yml = yaml.dump(new_data)
+    file_content = get_file_in_repository(repository, branch, yml_filename).decoded_content.decode()
+    print("yml file content length:", len(file_content))
     # save back to github
-    #TODO write_file(repository, branch, yml_filename, file_content, "Add entries from " + ", ".join(communities))
+    write_file(repository, branch, yml_filename, file_content + zenodo_yml, "Add entries from " + ", ".join(communities))
     log = "\n".join(log)
-    #TODO res = send_pull_request(repository, branch, "Add content from communities: " + ", ".join(communities), f"Added contents:\n{log}")
-    #TODO print("Done.", res)
+    res = send_pull_request(repository, branch, "Add content from communities: " + ", ".join(communities), f"Added contents:\n{log}")
+    print("Done.", res)
     
     # save data in local file
     file_content = read_yaml_file(yml_filename)
@@ -97,119 +103,19 @@ def main():
     write_yaml_file(yml_filename, file_content)
 
 
+def formulate_post(first_author, name, description):
+    from _llm_utilities import prompt_azure
+    post_text = prompt_azure(f"""
+Formulate a 100 character long tweet. 
+The content should be about the most recent work by {first_author} et al. about '{name}' published on Zenodo. 
+This is the abstract of the work: 
+{description}
+
+Now, formulate a 100 character short tweet, enthusiastically mentioning the author and summarizing the work.
+""")
+    return post_text
 
 
-
-def load_dataframe(directory_path):
-    """
-    Returns all contents (collected from all yml files) in a pandas DataFrame
-    """
-    import pandas as pd
-    content = all_content(directory_path)
-
-    if len(content['resources']) == 0:
-        return pd.DataFrame({
-            "url":[]
-        })
-    
-    return pd.DataFrame(content['resources'])
-
-
-def all_content(directory_path):
-    """
-    Go through all folders and yml files, and collect all content in a list of dictionaries.
-    """
-    import os
-    content = {'resources':[]}
-    for filename in os.listdir(directory_path):
-        if filename.endswith('.yml'):
-            #print("Adding", filename)
-            new_content = read_yaml_file(os.path.join(directory_path, filename))  # Corrected line
-            if new_content['resources'] is not None:
-                content['resources'] = content['resources'] + new_content['resources']
-    return content
-
-
-def read_yaml_file(filename):
-    """Read a yaml file and return the content as dictionary of dictionaries"""
-    import yaml
-    with open(filename, 'r', encoding="utf8") as file:
-        data = yaml.safe_load(file)
-        
-        if "url" in data.keys() and "zenodo" in str(data["url"]).lower():
-            data["tags"].append("zenodo")
-        
-        return data
-
-
-def write_yaml_file(file_path, data):
-    """Saves data as yaml file to disk"""
-    import yaml
-    with open(file_path, 'w', encoding='utf-8') as file:
-        yaml.dump(data, file, allow_unicode=True)
-
-
-def complete_zenodo_data(zenodo_url):
-    """
-    Completes Zenodo data retrieval and structuring for inclusion in a YAML file.
-
-    Parameters
-    ----------
-    zenodo_url : str
-        The URL of the Zenodo record.
-
-    Returns
-    -------
-    entry : dict
-        A dictionary containing structured metadata and statistics
-        fetched from the Zenodo record.
-    """
-    zenodo_data = read_zenodo(zenodo_url)
-    entry = {}
-    urls = [zenodo_url]
-
-    if 'doi_url' in zenodo_data.keys():
-        doi_url = zenodo_data['doi_url']
-
-        # Add DOI URL to the URLs list if it's not already there
-        if doi_url not in urls:
-            urls.append(doi_url)
-    entry['url'] = urls
-
-    if 'metadata' in zenodo_data.keys():
-        metadata = zenodo_data['metadata']
-        # Update entry with Zenodo metadata and statistics
-        entry['name'] = metadata['title']
-        if 'publication_date' in metadata.keys():
-            entry['publication_date'] = metadata['publication_date']
-        if 'creators' in metadata.keys():
-            creators = metadata['creators']
-            entry['authors'] = [c['name'] for c in creators]
-            entry['first_author'] = creators[0]['name']
-        if 'license' in metadata.keys():
-            entry['license'] = metadata['license']['id']
-
-
-    return entry
-
-
-def read_zenodo(record):
-    """
-    Retrieves meta-data from zenodo.org of a specified record.
-    """
-    import requests
-    import json
-
-    record = record.replace("https://zenodo.org/", "")
-    record = record.replace("record/", "records/")
-    url = "https://zenodo.org/api/" + record
-
-    #print(url)
-    
-    # Download the file
-    response = requests.get(url)
-    data = response.json()
-    return data
 
 
 if __name__ == "__main__":
