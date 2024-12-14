@@ -55,16 +55,10 @@ def send_post(message, link=None, image_filename=None):
         with open(image_filename, 'rb') as f:
             img_data = f.read()
 
-        # read aspect ratio
-        from PIL import Image
-        image = Image.open(image_filename)
-        aspect_ratio = models.AppBskyEmbedDefs.AspectRatio(height=image.height, width=image.width)
-
         post = client.send_image(
             text=text,
             image=img_data,
-            image_alt='',
-            image_aspect_ratio=aspect_ratio,
+            image_alt=''
         )
     else:
         post = client.send_post(text)
