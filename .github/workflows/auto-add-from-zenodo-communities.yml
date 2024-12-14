@@ -26,5 +26,6 @@ jobs:
       env:
         GITHUB_API_KEY: "${{ secrets.GITHUB_TOKEN }}"
         GITHUB_RUN_ID: "${{ github.run_id }}"
+        GH_MODELS_API_KEY: "${{ secrets.GH_MODELS_API_KEY }}"
       run: |
         python auto-add-from-zenodo-communities.py haesleinhuepf/zenodo-bluesky-bob
