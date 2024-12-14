@@ -1,11 +1,11 @@
-name: Respond to posts on bluesky
+name: Submit bluesky posts
 
 on:
   push:
     branches:
       - 'main'
 jobs:
-  run-on-push:
+  auto-submit-bluesky-posts:
     runs-on: ubuntu-latest
 
     steps:

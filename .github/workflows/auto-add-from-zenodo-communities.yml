@@ -5,7 +5,7 @@ on:
     - cron: '15 * * * *'  # This runs the job every hour
 
 jobs:
-  run-weekly-summary:
+  auto-add-from-zenodo-communities:
     runs-on: ubuntu-latest
 
     steps:
