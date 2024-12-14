@@ -29,4 +29,4 @@ jobs:
         BLUESKY_USERNAME: "${{ secrets.BLUESKY_USERNAME }}"
         GH_MODELS_API_KEY: "${{ secrets.GH_MODELS_API_KEY }}"
       run: |
-        python auto-submit-bluesky-posts.py
+      #  python auto-submit-bluesky-posts.py
