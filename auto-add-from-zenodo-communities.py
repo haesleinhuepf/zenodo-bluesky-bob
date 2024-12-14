@@ -44,7 +44,7 @@ def main():
     all_urls = str(df["url"].tolist())
 
     for community in communities:
-        log.append(f"# [{community}](https://zenodo.org/communities/{community})")
+        header = f"# [{community}](https://zenodo.org/communities/{community})"
 
         # new data
         response = requests.get('https://zenodo.org/api/records',
@@ -77,6 +77,11 @@ def main():
                 # formulate bluesky post
                 post = formulate_post(data["first_author"], data["name"], data["description"])
                 data['bluesky_post'] = post
+
+                if header is not None:
+                    log.append(header)
+                    header = None
+
                 log.append(f"* {post} [{url}]({url})")
 
                 # download first page of PDF
@@ -99,24 +104,26 @@ def main():
                 #break
         #break
 
-    # save data in repository
-    zenodo_yml = yaml.dump(new_data)
-    file_content = get_file_in_repository(repository, branch, yml_filename).decoded_content.decode()
-    print("yml file content length:", len(file_content))
-    # save back to github
-    write_file(repository, branch, yml_filename, file_content + zenodo_yml, "Add entries from " + ", ".join(communities))
-    log = "\n".join(log)
-    res = send_pull_request(repository, branch, "Add content from communities: " + ", ".join(communities), f"Added contents:\n{log}")
-    print("Done.", res)
-    
-    # save data in local file
-    file_content = read_yaml_file(yml_filename)
-    if file_content["resources"] is None:
-        file_content["resources"] = new_data
-    else:
-        file_content["resources"] += new_data
-    write_yaml_file(yml_filename, file_content)
+    if len(new_data) > 0:
+        # save data in repository
+        zenodo_yml = yaml.dump(new_data)
+        file_content = get_file_in_repository(repository, branch, yml_filename).decoded_content.decode()
+        print("yml file content length:", len(file_content))
+        # save back to github
+        write_file(repository, branch, yml_filename, file_content + zenodo_yml, "Add entries from " + ", ".join(communities))
+        log = "\n".join(log)
+        res = send_pull_request(repository, branch, "Add content from communities: " + ", ".join(communities), f"Added contents:\n{log}")
+        print("Done.", res)
 
+        # save data in local file
+        file_content = read_yaml_file(yml_filename)
+        if file_content["resources"] is None:
+            file_content["resources"] = new_data
+        else:
+            file_content["resources"] += new_data
+        write_yaml_file(yml_filename, file_content)
+        print("Done2.")
+    print("Bye.")
 
 def formulate_post(first_author, name, description):
     from _llm_utilities import prompt_azure
