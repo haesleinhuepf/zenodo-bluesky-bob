@@ -45,7 +45,7 @@ def send_post(message, link=None, image_filename=None):
     client = Client()
     client.login(BLUESKY_HANDLE, APP_PASSWORD)
     
-    text = client_utils.TextBuilder().text(message)
+    text = client_utils.TextBuilder().text(message + "\n")
     if link is not None:
         text = text.link(link, link)
     
