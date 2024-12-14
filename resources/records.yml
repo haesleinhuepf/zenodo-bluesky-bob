@@ -2693,3 +2693,44 @@ resources:
   url:
   - https://zenodo.org/records/6905931
   - https://doi.org/10.5281/zenodo.6905931
+- authors:
+  - Wetzker, Cornelia
+  bluesky_image: images/20241214_first_page_14006558.png
+  bluesky_post: "\U0001F50D Excited about Wetzker et al.'s NFDI4BIOIMAGE! Transforming\
+    \ bioimaging data with FAIR stewardship! \U0001F9EC\u2728"
+  description: 'The poster introduces the consortium NFDI4BIOIMAGE with its central
+    objectives, provides an overview of challenges in bioimage data handling, sharing
+    and analysis and lists support options by the consortium through its data stewardship
+    team.
+
+    It is part of the work of the German consortium NFDI4BIOIMAGE funded by the Deutsche
+    Forschungsgemeinschaft (DFG grant number NFDI 46/1, project number 501864659)
+    and has been presented at the conference FDM@Campus held in G&ouml;ttingen September
+    23-25, 2024.'
+  first_author: Wetzker, Cornelia
+  id: '14006558'
+  license: cc-by-4.0
+  name: 'New Kid on the (NFDI) Block: NFDI4BIOIMAGE  - A National Initiative for FAIR
+    Data Management in Bioimaging and Bioimage Analysis'
+  publication_date: '2024-10-29'
+  submission_date: '2024-12-14T14:21:15.122011'
+  url:
+  - https://zenodo.org/records/14006558
+  - https://doi.org/10.5281/zenodo.14006558
+- authors:
+  - Moore, Josh
+  bluesky_image: images/20241214_first_page_14001388.png
+  bluesky_post: "\U0001F680 Exciting insights in \"NFDI4BIOIMAGE\" by Moore, Josh\
+    \ et al.! Revolutionizing microscopy data! \U0001F52C\u2728 #BioImaging"
+  description: Presented at https://globalbioimaging.org/exchange-of-experience/exchange-of-experience-ix
+    in Okazaki, Japan.
+  first_author: Moore, Josh
+  id: '14001388'
+  license: cc-by-4.0
+  name: "[GBI EoE IX] NFDI4BIOIMAGE\nNational Research Data Infrastructure \nfor Microscopy\
+    \ and BioImage Analysis"
+  publication_date: '2024-10-29'
+  submission_date: '2024-12-14T14:21:22.929008'
+  url:
+  - https://zenodo.org/records/14001388
+  - https://doi.org/10.5281/zenodo.14001388
