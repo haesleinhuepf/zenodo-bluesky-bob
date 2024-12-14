@@ -2737,6 +2737,7 @@ resources:
   bluesky_image: images/20241214_first_page_14418209.png
   bluesky_post: 'Check out Haase, Robert et al.''s intro to LLMs for life scientists
     on Zenodo! #LLM #LifeScience'
+  bluesky_url: https://bsky.app/profile/haesleinhuepf-bot.bsky.social/post/3ldccmhhsqi2u
   description: 'This slide deck introduces Large Language Models to an audience of
     life-scientists. We first dive into terminology: Different kinds of Language Models
     and what they can be used for. The remaining slides are optional slides to allow
