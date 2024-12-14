@@ -34,7 +34,7 @@ def main():
     yml_filename = "resources/records.yml"
 
     # read "database"
-    branch = "" #TODO create_branch(repository)
+    branch = create_branch(repository)
     print("New branch:", branch)
     log = []
     new_data = []
@@ -44,8 +44,8 @@ def main():
     all_urls = str(df["url"].tolist())
 
     for community in communities:
-        log.append(f"# {community}")
-        log.append(f"https://zenodo.org/communities/{community}")
+        log.append(f"# [{community}](https://zenodo.org/communities/{community})")
+
         # new data
         response = requests.get('https://zenodo.org/api/records',
                                 params={'communities': community,
@@ -71,18 +71,19 @@ def main():
 
             if not_in_data_yet:
                 data['submission_date'] = datetime.now().isoformat()
-                name = data["name"]
-                log.append(f"* [{name}]({url})")
+                #name = data["name"]
 
-                # formulate bluesky post
-                data['bluesky_post'] = formulate_post(data["first_author"], data["name"], data["description"])
-                
+                if False:
+                    # formulate bluesky post
+                    post = formulate_post(data["first_author"], data["name"], data["description"])
+                    data['bluesky_post'] = post
+                    log.append(f"* {post} [{url}]({url})")
                 new_data.append(data)
 
                 # deal with entries listed in multiple communities
                 all_urls = all_urls + "\n" + "\n".join([u for u in data["url"]])
-                break
-        break
+                #break
+        #break
 
     # save data in repository
     zenodo_yml = yaml.dump(new_data)

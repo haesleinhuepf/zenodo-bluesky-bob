@@ -11,19 +11,6 @@ import yaml
 from _bluesky_utilities import send_post
 
 def main():
-    """
-    Main function to handle the process of retrieving Zenodo data and appending
-    it to a YAML file in a GitHub repository.
-
-    This function takes command-line arguments for the repository name and issue number,
-    retrieves the issue body, checks if it's a valid Zenodo link, retrieves corresponding
-    data, and appends it to a specified YAML file by creating a new branch and submitting
-    a pull request.
-
-    Returns
-    -------
-    None
-    """
     repository = "haesleinhuepf/zenodo-bluesky-bob" #TODO sys.argv[1]
     yml_filename = "resources/records.yml"
 
@@ -39,7 +26,7 @@ def main():
 
             message = row["bluesky_post"]
             print("Tweeting:", message, link)
-            row["bluesky_url"] = "https://bsky.app/profile/haesleinhuepf-bot.bsky.social/post/3ldbcmwfwbs2g" #TODO send_post(message, link)
+            row["bluesky_url"] = send_post(message, link)
             posted_something = True
 
     if posted_something:
@@ -51,7 +38,9 @@ def main():
         
         # save back to github
         write_file(repository, branch, yml_filename, file_content, "Tweeted")
-        print("Done")
+        print("Tweeting done")
+    else:
+        print("Nothing to tweet")
 
 
 if __name__ == "__main__":
