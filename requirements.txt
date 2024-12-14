@@ -1,0 +1,7 @@
+atproto==0.0.55
+azure-ai-inference
+pandas
+pyyaml
+numpy
+pygithub
+toolz

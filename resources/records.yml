@@ -1,0 +1,48 @@
+resources:
+- authors:
+  - Becker, Markus M.
+  - Chaerony Siffa, Ihda
+  - Baum, Roman
+  first_author: Becker, Markus M.
+  license: cc-by-4.0
+  name: Terminology service for research data management and knowledge discovery in
+    low-temperature plasma physics
+  publication_date: '2024-12-11'
+  submission_date: '2024-12-14T12:45:57.397873'
+  url:
+  - https://zenodo.org/records/14381522
+  - https://doi.org/10.5281/zenodo.14381522
+- authors:
+  - König-Ries, Birgitta
+  - Haase, Robert
+  - Nüst, Daniel
+  - Förstner, Konrad
+  - Engel, Judith Sophie
+  first_author: König-Ries, Birgitta
+  license: cc-by-4.0
+  name: Angebote der NFDI für die Forschung im Bereich Zoologie
+  publication_date: '2024-12-04'
+  submission_date: '2024-12-14T12:48:48.465623'
+  url:
+  - https://zenodo.org/records/14278058
+  - https://doi.org/10.5281/zenodo.14278058
+- authors:
+  - NFDI4BIOIMAGE Consortium
+  first_author: NFDI4BIOIMAGE Consortium
+  license: cc-by-4.0
+  name: NFDI4BIOIMAGE data management illustrations by Henning Falk
+  publication_date: '2024-11-29'
+  submission_date: '2024-12-14T12:57:11.583158'
+  url:
+  - https://zenodo.org/records/14186101
+  - https://doi.org/10.5281/zenodo.14186101
+- authors:
+  - Moore, Josh
+  first_author: Moore, Josh
+  license: cc-by-4.0
+  name: OME2024 NGFF Challenge Results
+  publication_date: '2024-11-01'
+  submission_date: '2024-12-14T12:59:19.992524'
+  url:
+  - https://zenodo.org/records/14234608
+  - https://doi.org/10.5281/zenodo.14234608
