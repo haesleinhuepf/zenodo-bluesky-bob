@@ -2735,7 +2735,7 @@ resources:
 - authors:
   - Haase, Robert
   bluesky_image: images/20241214_first_page_14418209.png
-  bluesky_post: 'Check out Haase, Robert et al.''s epic intro to LLMs for life scientists
+  bluesky_post: 'Check out Haase, Robert et al.''s intro to LLMs for life scientists
     on Zenodo! #LLM #LifeScience'
   description: 'This slide deck introduces Large Language Models to an audience of
     life-scientists. We first dive into terminology: Different kinds of Language Models
