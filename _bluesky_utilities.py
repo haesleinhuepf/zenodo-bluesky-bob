@@ -36,7 +36,7 @@ def pretty_print(s):
     
     print(''.join(result))
 
-def send_post(message, link=None):
+def send_post(message, link=None, image_filename=None):
     """Send a message as a new post"""
     # Login to bluesky
     BLUESKY_HANDLE = os.environ.get("BLUESKY_USERNAME", "")
@@ -45,12 +45,29 @@ def send_post(message, link=None):
     client = Client()
     client.login(BLUESKY_HANDLE, APP_PASSWORD)
     
-    text = client_utils.TextBuilder().text(message) #.link('haesleinhuepf', 'https://haesleinhuepf.github.io')
+    text = client_utils.TextBuilder().text(message)
     if link is not None:
         text = text.link(link, link)
     
     print("tweeting:", text)
-    post = client.send_post(text)
+
+    if image_filename is not None:
+        with open(image_filename, 'rb') as f:
+            img_data = f.read()
+
+        # read aspect ratio
+        from PIL import Image
+        image = Image.open(image_filename)
+        aspect_ratio = models.AppBskyEmbedDefs.AspectRatio(height=image.height, width=image.width)
+
+        post = client.send_image(
+            text=text,
+            image=img_data,
+            image_alt='',
+            image_aspect_ratio=aspect_ratio,
+        )
+    else:
+        post = client.send_post(text)
 
     id = post.uri.split("/")[-1]
     link = f"https://bsky.app/profile/{BLUESKY_HANDLE}/post/{id}"

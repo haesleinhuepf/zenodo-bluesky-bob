@@ -119,10 +119,10 @@ resources:
   - https://zenodo.org/records/13991322
   - https://doi.org/10.5281/zenodo.13991322
 - authors:
-  - "J\xFCngst, Christian"
+  - Jüngst, Christian
   - Zentis, Peter
   description: Raw microscopy image from the NFDI4Bioimage calendar October 2024
-  first_author: "J\xFCngst, Christian"
+  first_author: Jüngst, Christian
   license: cc-by-4.0
   name: NFDI4Bioimage Calendar 2024 October; original image
   publication_date: '2024-09-25'
@@ -198,10 +198,10 @@ resources:
 - authors:
   - Moore, Joshua
   - Kunis, Susanne
-  - "Gr\xFCning, Bj\xF6rn"
+  - Grüning, Björn
   - Blank-Burian, Markus
   - Mallm, Jan-Philipp
-  - "St\xF6ter, Torsten"
+  - Stöter, Torsten
   - Zuschratter, Werner
   - Figge, Marc Thilo
   - Kreshuk, Anna
@@ -239,12 +239,12 @@ resources:
   - Zentis, Peter
   - Brilhaus, Dominik
   - Hartley, Matthew
-  - "H\xFClsmann, Bastian"
+  - Hülsmann, Bastian
   - Dunker, Susanne
   - Keppler, Antje
   - Mathur, Aastha
   - Meesters, Christian
-  - "M\xF6bius, Wiebke"
+  - Möbius, Wiebke
   - Nahnsen, Sven
   - Pfander, Claudia
   - Rehwald, Stephanie
@@ -853,7 +853,7 @@ resources:
     um die Beantragung von Forschungsgro&szlig;ger&auml;ten nach Art. 91b GG.'
   first_author: Financial & Legal Framework of Core Facilities
   license: cc-by-4.0
-  name: "GerBI-Chat: Teil 2 - Wie schreibe ich am besten einen Gro\xDFegr\xE4teantrag"
+  name: 'GerBI-Chat: Teil 2 - Wie schreibe ich am besten einen Großegräteantrag'
   publication_date: '2024-10-02'
   submission_date: '2024-12-14T14:04:21.699208'
   url:
@@ -894,7 +894,7 @@ resources:
     behandelt.'
   first_author: Financial & Legal Framework of Core Facilities
   license: cc-by-4.0
-  name: "GerBI-Chat: Teil 1 - Vom Bedarf bis zum Gro\xDFger\xE4teantrag-Schreiben"
+  name: 'GerBI-Chat: Teil 1 - Vom Bedarf bis zum Großgeräteantrag-Schreiben'
   publication_date: '2024-09-11'
   submission_date: '2024-12-14T14:04:21.930510'
   url:
@@ -915,7 +915,7 @@ resources:
   - Vogelsang, Andy
   - Gerlach, Michael
   - Nobst, Anja
-  - "M\xFCller-Reichert, Thomas"
+  - Müller-Reichert, Thomas
   - Tulok, Silke
   description: 'This are a two Key-Value pair templates used for the annotation of
     datasets in OMERO. They are tailored for light- and electron microcopy data for
@@ -975,8 +975,8 @@ resources:
     &nbsp;'
   first_author: Fabig, Gunar
   license: cc-by-4.0
-  name: "Key-Value pair template for annotation of datasets in OMERO for light- and\
-    \ electron microscopy data within the research group of Prof. M\xFCller-Reichert"
+  name: Key-Value pair template for annotation of datasets in OMERO for light- and
+    electron microscopy data within the research group of Prof. Müller-Reichert
   publication_date: '2024-06-26'
   submission_date: '2024-12-14T14:04:22.185640'
   url:
@@ -1517,7 +1517,7 @@ resources:
   - Keppler, Antje
   - Serrano-Solano, Beatriz
   - Rybina, Arina
-  - "\xD6zdemir, Bugra"
+  - Özdemir, Bugra
   - Bischof, Johanna
   - El Ghadraoui, Ayoub
   - Eriksson, John E.
@@ -1555,8 +1555,8 @@ resources:
   - JH Brookes, Simon
   - M McQuade, Rachel
   - PP Foong, Jaime
-  - "G\xF3mez-de-Mariscal, Estibaliz"
-  - "Mu\xF1oz Barrutia, Arrate"
+  - Gómez-de-Mariscal, Estibaliz
+  - Muñoz Barrutia, Arrate
   - Kaltschmidt, Julia A.
   - King, Sebastian K.
   - Haase, Robert
@@ -1607,8 +1607,8 @@ resources:
   - Rachel M McQuade
   - Jaime PP Foong
   - Sebastian K. King
-  - "Estibaliz  G\xF3mez-de-Mariscal"
-  - "Arrate Mu\xF1oz-Barrutia"
+  - Estibaliz  Gómez-de-Mariscal
+  - Arrate Muñoz-Barrutia
   - Robert Haase
   - Simona Carbone
   - Nicholas A. Veldhuis
@@ -1690,7 +1690,7 @@ resources:
   - https://zenodo.org/records/10460434
   - https://doi.org/10.5281/zenodo.10460434
 - authors:
-  - "Martin Sch\xE4tz"
+  - Martin Schätz
   description: Research data management and how not to get overwhelmed with data presentation
     is an overview of bioimage analysis with a focus on the basics for data management
     planning, FAIR principles, and how to practically organize folders and prepares
@@ -1698,7 +1698,7 @@ resources:
     Common licenses, and a sum up of electronic laboratory notebooks. The last two
     slides go through how all of that works in practice in open access core microscopy
     facility.
-  first_author: "Martin Sch\xE4tz"
+  first_author: Martin Schätz
   license: cc-by-4.0
   name: Research Data Managemet and how not to get overwhelmed with data
   publication_date: '2023-09-23'
@@ -1719,9 +1719,9 @@ resources:
   - https://zenodo.org/records/7919117
   - https://doi.org/10.5281/zenodo.7919117
 - authors:
-  - "Sch\xE4tz, Martin"
-  - "Rube\u0161ov\xE1, Olga"
-  - "Mare\u0161, Jan"
+  - Schätz, Martin
+  - Rubešová, Olga
+  - Mareš, Jan
   - Spark, Alan
   description: 'The software tool is developed on demand of Radiological Department
     of Faculty Hospital of Kr&aacute;lovsk&eacute; Vinohrady, with the aim to provide
@@ -1765,7 +1765,7 @@ resources:
 
 
     &nbsp;'
-  first_author: "Sch\xE4tz, Martin"
+  first_author: Schätz, Martin
   license: cc-by-4.0
   name: ImageJ tool for percentage estimation of pneumonia in lungs
   publication_date: '2023-05-02'
@@ -1813,14 +1813,14 @@ resources:
   - https://zenodo.org/records/7409423
   - https://doi.org/10.5281/zenodo.7409423
 - authors:
-  - "Martin Sch\xE4tz"
-  - "Sch\xE4tz, Martin"
+  - Martin Schätz
+  - Schätz, Martin
   description: The slides were presented during the Macro programming with ImageJ
     workshop (https://www.16mcm.cz/programme/#workshops) which was part of the&nbsp;16th
     Multinational Congress on Microscopy. It is a collection and &quot;reshuffle&quot;
     of slides originally made by Robert Haase on topics from Image Analysis in general
     up to&nbsp;User-friendly GPU-accelerated bio-image analysis and CLIJ2.
-  first_author: "Martin Sch\xE4tz"
+  first_author: Martin Schätz
   license: cc-by-4.0
   name: Interactive Image Data Flow Graphs
   publication_date: '2022-10-17'
@@ -1899,7 +1899,7 @@ resources:
   - https://zenodo.org/records/7015307
   - https://doi.org/10.5281/zenodo.7015307
 - authors:
-  - "Sch\xE4tz, Martin"
+  - Schätz, Martin
   description: 'SciAugment v0.2.0 has pip installable version, channel-wise augmentation
     was added, and an option for all augmentations or no augmentation. Examples of
     how to use the tool are in README and in Google Colab notebooks. Practical examples
@@ -1909,7 +1909,7 @@ resources:
 
     SciAugment aims to provide an option to create an augmented image set with similar
     changes in data as the imaging sensor and technique would do.'
-  first_author: "Sch\xE4tz, Martin"
+  first_author: Schätz, Martin
   license: other-open
   name: SciAugment
   publication_date: '2022-07-29'
@@ -1918,9 +1918,9 @@ resources:
   - https://zenodo.org/records/6991106
   - https://doi.org/10.5281/zenodo.6991106
 - authors:
-  - "Sch\xE4tz, Martin"
-  - "Mraz\xEDk, Luk\xE1\u0161"
-  - "M\xE1hlerova, Karolina"
+  - Schätz, Martin
+  - Mrazík, Lukáš
+  - Máhlerova, Karolina
   description: 'The first version contains an example of augmentation of scientific
     data and object detection with YOLO_v5 on colony counting (2 classes), object
     counting in blood smears (can be used as semisupervised learning for faster annotation),
@@ -1928,7 +1928,7 @@ resources:
 
 
     The project is available on GitHub.'
-  first_author: "Sch\xE4tz, Martin"
+  first_author: Schätz, Martin
   license: other-open
   name: 'martinschatz-cz/SciCount: v1.0.0 with reusable example notebooks'
   publication_date: '2022-08-02'
@@ -2101,7 +2101,7 @@ resources:
   - https://zenodo.org/records/6535296
   - https://doi.org/10.5281/zenodo.6535296
 - authors:
-  - "Laia Sim\xF3-Riudalbas"
+  - Laia Simó-Riudalbas
   - Romain Guiet
   - Olivier Burri
   - Julien Duc
@@ -2143,7 +2143,7 @@ resources:
 
     [1] Bankhead, P. et al.&nbsp;QuPath: Open source software for digital pathology
     image analysis.&nbsp;Scientific Reports&nbsp;(2017). https://doi.org/10.1038/s41598-017-17204-5'
-  first_author: "Laia Sim\xF3-Riudalbas"
+  first_author: Laia Simó-Riudalbas
   license: cc-by-4.0
   name: Liver Micrometastases area quantification using QuPath and pixel classifier
   publication_date: '2022-05-06'
@@ -2165,20 +2165,20 @@ resources:
     \ K40) using default settings as per the&nbsp;Cellpose documentation&nbsp;. Training\
     \ was done using a Renku environment (renku template).\n\n&nbsp;\n\nCommand Line\
     \ Execution for the different trained models\n\nnuclei_from_bf: \n\ncellpose --train\
-    \ --dir 'data/train/' --test_dir 'data/test/' --pretrained_model nuclei\_ --img_filter\
+    \ --dir 'data/train/' --test_dir 'data/test/' --pretrained_model nuclei  --img_filter\
     \ _bf --mask_filter _nuclei --chan 0 --chan2 0 --use_gpu --verbose\n\ncyto_from_bf:\n\
     \ncellpose --train --dir 'data/train/' --test_dir 'data/test/' --pretrained_model\
-    \ cyto2 --img_filter _bf --mask_filter _cyto --chan 0 --chan2 0 --use_gpu\_--verbose\n\
+    \ cyto2 --img_filter _bf --mask_filter _cyto --chan 0 --chan2 0 --use_gpu --verbose\n\
     \n&nbsp;\n\nnuclei_from_dpc:\n\ncellpose --train --dir 'data/train/' --test_dir\
-    \ 'data/test/' --pretrained_model nuclei\_ --img_filter _dpc --mask_filter _nuclei\
-    \ --chan 0 --chan2 0 --use_gpu\_--verbose\n\ncyto_from_dpc:\n\ncellpose --train\
+    \ 'data/test/' --pretrained_model nuclei  --img_filter _dpc --mask_filter _nuclei\
+    \ --chan 0 --chan2 0 --use_gpu --verbose\n\ncyto_from_dpc:\n\ncellpose --train\
     \ --dir 'data/train/' --test_dir 'data/test/' --pretrained_model cyto2 --img_filter\
-    \ _dpc --mask_filter _cyto --chan 0 --chan2 0 --use_gpu\_--verbose\n\n&nbsp;\n\
-    \nnuclei_from_sqrdpc:\n\ncellpose --train --dir 'data/train/' --test_dir 'data/test/'\
+    \ _dpc --mask_filter _cyto --chan 0 --chan2 0 --use_gpu --verbose\n\n&nbsp;\n\n\
+    nuclei_from_sqrdpc:\n\ncellpose --train --dir 'data/train/' --test_dir 'data/test/'\
     \ --pretrained_model nuclei --img_filter _sqrdpc --mask_filter _nuclei --chan\
-    \ 0 --chan2 0 --use_gpu\_--verbose\n\ncyto_from_sqrdpc:\n\ncellpose --train --dir\
+    \ 0 --chan2 0 --use_gpu --verbose\n\ncyto_from_sqrdpc:\n\ncellpose --train --dir\
     \ 'data/train/' --test_dir 'data/test/' --pretrained_model cyto2 --img_filter\
-    \ _sqrdpc --mask_filter _cyto --chan 0 --chan2 0 --use_gpu\_--verbose\n\n&nbsp;\n\
+    \ _sqrdpc --mask_filter _cyto --chan 0 --chan2 0 --use_gpu --verbose\n\n&nbsp;\n\
     \nNOTE&nbsp;(&sect;):&nbsp;We provide&nbsp;a notebook for Quality Control, which\
     \ is an adaptation of the&nbsp;&quot;Cellpose (2D and 3D)&quot; notebook from\
     \ ZeroCostDL4Mic&nbsp;.\n\nNOTE: This dataset used a training dataset from the\
@@ -2693,3 +2693,17 @@ resources:
   url:
   - https://zenodo.org/records/6905931
   - https://doi.org/10.5281/zenodo.6905931
+- authors:
+  - Moore, Josh
+  description: Presented at https://globalbioimaging.org/exchange-of-experience/exchange-of-experience-ix
+    in Okazaki, Japan.
+  first_author: Moore, Josh
+  id: '14001388'
+  license: cc-by-4.0
+  name: "[GBI EoE IX] NFDI4BIOIMAGE\nNational Research Data Infrastructure \nfor Microscopy\
+    \ and BioImage Analysis"
+  publication_date: '2024-10-29'
+  submission_date: '2024-12-14T14:21:22.929008'
+  url:
+  - https://zenodo.org/records/14001388
+  - https://doi.org/10.5281/zenodo.14001388

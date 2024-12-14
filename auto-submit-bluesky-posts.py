@@ -24,9 +24,13 @@ def main():
             if isinstance(link, list):
                 link = link[-1]
 
+            image_filename = None
+            if "bluesky_image" in keys:
+                image_filename = row["bluesky_image"]
+
             message = row["bluesky_post"]
-            print("Tweeting:", message, link)
-            row["bluesky_url"] = send_post(message, link)
+            print("Tweeting:", message, link, image_filename)
+            row["bluesky_url"] = send_post(message, link, image_filename)
             posted_something = True
 
     if posted_something:

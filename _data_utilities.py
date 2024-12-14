@@ -64,7 +64,7 @@ def complete_zenodo_data(zenodo_url):
         fetched from the Zenodo record.
     """
     zenodo_data = read_zenodo(zenodo_url)
-    entry = {}
+    entry = {"id": zenodo_data["id"]}
     urls = [zenodo_url]
 
     if 'doi_url' in zenodo_data.keys():
@@ -119,4 +119,5 @@ def read_zenodo(record):
     # Download the file
     response = requests.get(url)
     data = response.json()
+    data["id"] = record.split("/")[-1]
     return data
