@@ -125,3 +125,18 @@ resources:
   url:
   - https://zenodo.org/records/14006558
   - https://doi.org/10.5281/zenodo.14006558
+- authors:
+  - Moore, Josh
+  bluesky_post: "\U0001F680 Exciting work by Josh Moore et al. on NFDI4BIOIMAGE for\
+    \ microscopy & bioimage analysis! \U0001F31F #BioImaging"
+  description: Presented at https://globalbioimaging.org/exchange-of-experience/exchange-of-experience-ix
+    in Okazaki, Japan.
+  first_author: Moore, Josh
+  license: cc-by-4.0
+  name: "[GBI EoE IX] NFDI4BIOIMAGE\nNational Research Data Infrastructure \nfor Microscopy\
+    \ and BioImage Analysis"
+  publication_date: '2024-10-29'
+  submission_date: '2024-12-14T13:57:04.004124'
+  url:
+  - https://zenodo.org/records/14001388
+  - https://doi.org/10.5281/zenodo.14001388
