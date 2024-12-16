@@ -2756,10 +2756,11 @@ resources:
   - Schmidt, Christian
   - Boissonnet, Tom
   - Bortolomeazzi, Michele
-  - "Kroo\xDF, Ksenia"
+  - Krooß, Ksenia
   bluesky_image: images/20241216_first_page_13861026.png
-  bluesky_post: "Exciting work by Schmidt et al.! Dive into BioImage Data Management\
-    \ & OMERO insights on Zenodo! \U0001F4CA\U0001F52C #BioImaging"
+  bluesky_post: 'Exciting work by Schmidt et al.! Dive into BioImage Data Management
+    & OMERO insights on Zenodo! 📊🔬 #BioImaging'
+  bluesky_url: https://bsky.app/profile/haesleinhuepf-bot.bsky.social/post/3ldgsunrbzu27
   description: 'Research Data Management for Microscopy and BioImage Analysis
 
 
