@@ -2752,3 +2752,38 @@ resources:
   url:
   - https://zenodo.org/records/14418209
   - https://doi.org/10.5281/zenodo.14418209
+- authors:
+  - Schmidt, Christian
+  - Boissonnet, Tom
+  - Bortolomeazzi, Michele
+  - "Kroo\xDF, Ksenia"
+  bluesky_image: images/20241216_first_page_13861026.png
+  bluesky_post: "Exciting work by Schmidt et al.! Dive into BioImage Data Management\
+    \ & OMERO insights on Zenodo! \U0001F4CA\U0001F52C #BioImaging"
+  description: 'Research Data Management for Microscopy and BioImage Analysis
+
+
+    Introduction to BioImaging Research Data Management, NFDI4BIOIMAGE and I3D:bioChristian
+    Schmidt /DKFZ Heidelberg
+
+    OMERO as a tool for bioimaging data managementTom Boissonnet /Heinrich-Heine Universit&auml;t
+    D&uuml;sseldorf
+
+    Reproducible image analysis workflows with OMERO software APIsMichele Bortolomeazzi
+    /DKFZ Heidelberg
+
+    Publishing datasets in public archives for bioimage dataKsenia Kroo&szlig; /Heinrich-Heine
+    Universit&auml;t D&uuml;sseldorf
+
+
+    Date &amp; Venue:Thursday, Sept. 26, 5.30 p.m.Haus 22 / Paul Ehrlich Lecture Hall
+    (H22-1)University Hospital Frankfurt'
+  first_author: Schmidt, Christian
+  id: '13861026'
+  license: cc-by-4.0
+  name: '[Workshop] Research Data Management for Microscopy and BioImage Analysis'
+  publication_date: '2024-09-30'
+  submission_date: '2024-12-16T16:38:01.570268'
+  url:
+  - https://zenodo.org/records/13861026
+  - https://doi.org/10.5281/zenodo.13861026
