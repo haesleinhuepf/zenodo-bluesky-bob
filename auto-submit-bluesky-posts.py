@@ -39,7 +39,7 @@ def main():
         # submit changes to Github
         branch = "main"
         file_content = get_file_in_repository(repository, branch, yml_filename).decoded_content.decode()
-        
+        file_content = yaml.dump(data, encoding='utf-8', allow_unicode=True)
         # save back to github
         write_file(repository, branch, yml_filename, file_content, "Tweeted")
         print("Tweeting done")
