@@ -2788,3 +2788,16 @@ resources:
   url:
   - https://zenodo.org/records/13861026
   - https://doi.org/10.5281/zenodo.13861026
+- authors:
+  - Salama Lab Fred Hutchinson Cancer Center
+  bluesky_post: "\"Exciting work from Salama Lab @FredHutch! Check out their 'LSM\
+    \ example J.Dubrulle' on Zenodo! \U0001F680\U0001F52C #Science\""
+  first_author: Salama Lab Fred Hutchinson Cancer Center
+  id: '14510432'
+  license: cc-by-4.0
+  name: LSM example J. Dubrulle
+  publication_date: '2024-12-17'
+  submission_date: '2024-12-17T21:27:03.109100'
+  url:
+  - https://zenodo.org/records/14510432
+  - https://doi.org/10.5281/zenodo.14510432
