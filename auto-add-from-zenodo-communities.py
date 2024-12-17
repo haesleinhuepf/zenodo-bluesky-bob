@@ -75,7 +75,8 @@ def main():
 
 
                 # formulate bluesky post
-                post = formulate_post(data["first_author"], data["name"], data["description"])
+                description = data["description"] if "description" in list(data.keys()) else ""
+                post = formulate_post(data["first_author"], data["name"], description)
                 data['bluesky_post'] = post
 
                 if header is not None:
