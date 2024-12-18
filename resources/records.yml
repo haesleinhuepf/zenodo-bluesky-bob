@@ -2790,8 +2790,6 @@ resources:
   - https://doi.org/10.5281/zenodo.13861026
 - authors:
   - Salama Lab Fred Hutchinson Cancer Center
-  bluesky_post: "\"Exciting work from Salama Lab @FredHutch! Check out their 'LSM\
-    \ example J.Dubrulle' on Zenodo! \U0001F680\U0001F52C #Science\""
   first_author: Salama Lab Fred Hutchinson Cancer Center
   id: '14510432'
   license: cc-by-4.0
