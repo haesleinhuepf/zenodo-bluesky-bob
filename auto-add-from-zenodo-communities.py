@@ -113,7 +113,7 @@ def main():
         # save back to github
         write_file(repository, branch, yml_filename, file_content + zenodo_yml, "Add entries from " + ", ".join(communities))
         log = "\n".join(log)
-        res = send_pull_request(repository, branch, "Add content from communities: " + ", ".join(communities), f"If you merge this pull-request, the following blusky posts about given zenodo records will be posted:\n{log}")
+        res = send_pull_request(repository, branch, "New entry on Zenodo - shall I create this bluesky post for this?", f"If you merge this pull-request, the following blusky posts about given zenodo records will be posted:\n{log}")
         print("Done.", res)
 
         # save data in local file
