@@ -2802,7 +2802,8 @@ resources:
 - authors:
   - Haase, Robert
   bluesky_image: images/20250110_first_page_14626054.png
-  bluesky_post: "Level up your coding project collaborations with git[hub]! \U0001F680 https://doi.org/10.5281/zenodo.14626054"
+  bluesky_post: Level up your coding project collaborations with git[hub]! 🚀 https://doi.org/10.5281/zenodo.14626054
+  bluesky_url: https://bsky.app/profile/haesleinhuepf-bot.bsky.social/post/3lfezo3pgkw2a
   description: This slide deck introduces the version control tool git, related terminology
     and the Github Desktop app for managing files in Git[hub] repositories. We furthermore
     dive into:* Working with repositories* Collaborative with others* Github-Zenodo
