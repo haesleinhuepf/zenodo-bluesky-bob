@@ -2820,9 +2820,9 @@ resources:
 - authors:
   - Moore, Josh
   bluesky_image: images/20250116_first_page_14650434.png
-  bluesky_post: "\"Discover scalable strategies for FAIR bioimaging in Moore et al.'s\
-    \ latest work! \U0001F4F7\u2728 Read here: https://zenodo.org/record/yourlink\
-    \ #FAIRdata #Bioimaging\""
+  bluesky_post: '"Discover scalable strategies for FAIR bioimaging in Moore et al.''s
+    latest work! 📷✨ Read here: https://zenodo.org/record/yourlink #FAIRdata #Bioimaging"'
+  bluesky_url: https://bsky.app/profile/haesleinhuepf-bot.bsky.social/post/3lfu3yhhmos2w
   description: 'CMCB LIFE SCIENCES SEMINARSTechnische Universit&auml;t Dresden16th
     January 2025
 
