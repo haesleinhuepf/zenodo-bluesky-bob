@@ -2817,3 +2817,24 @@ resources:
   url:
   - https://zenodo.org/records/14626054
   - https://doi.org/10.5281/zenodo.14626054
+- authors:
+  - Moore, Josh
+  bluesky_image: images/20250116_first_page_14650434.png
+  bluesky_post: "\"Discover scalable strategies for FAIR bioimaging in Moore et al.'s\
+    \ latest work! \U0001F4F7\u2728 Read here: https://zenodo.org/record/yourlink\
+    \ #FAIRdata #Bioimaging\""
+  description: 'CMCB LIFE SCIENCES SEMINARSTechnische Universit&auml;t Dresden16th
+    January 2025
+
+    https://tu-dresden.de/cmcb/crtd/news-termine/termine/cmcb-life-sciences-seminar-josh-moore-german-bioimaging-e-v-society-for-microscopy-and-image-analysis-constance
+
+    &nbsp;'
+  first_author: Moore, Josh
+  id: '14650434'
+  license: cc-by-4.0
+  name: '[CMCB] Scalable strategies for a next-generation of FAIR bioimaging'
+  publication_date: '2025-01-16'
+  submission_date: '2025-01-16T10:31:47.927968'
+  url:
+  - https://zenodo.org/records/14650434
+  - https://doi.org/10.5281/zenodo.14650434
