@@ -2838,3 +2838,14 @@ resources:
   url:
   - https://zenodo.org/records/14650434
   - https://doi.org/10.5281/zenodo.14650434
+- authors:
+  - West-Foyle, Hoku
+  first_author: West-Foyle, Hoku
+  id: '14675120'
+  license: cc-zero
+  name: Andor Dragonfly confocal image of BPAE cells stained for actin, IMS file format
+  publication_date: '2025-01-16'
+  submission_date: '2025-01-16T23:26:42.158537'
+  url:
+  - https://zenodo.org/records/14675120
+  - https://doi.org/10.5281/zenodo.14675120
