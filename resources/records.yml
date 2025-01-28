@@ -2851,9 +2851,6 @@ resources:
   - https://doi.org/10.5281/zenodo.14675120
 - authors:
   - Moore, Josh
-  bluesky_image: images/20250128_first_page_14716546.png
-  bluesky_post: "\"Excited about Josh Moore et al.'s talk on scalable FAIR bioimaging!\
-    \ Learn more: https://zenodo.org \U0001F44F\u2728 #FAIRData\""
   description: 'Talk given at Georg-August-Universit&auml;t G&ouml;ttingen Campus
     Institute Data Science23rd January 2025
 
@@ -2869,8 +2866,6 @@ resources:
   - https://doi.org/10.5281/zenodo.14716546
 - authors:
   - Vermaercke, Ben
-  bluesky_post: "\"Exciting innovation by Vermaercke et al.! \U0001F680 New optimized\
-    \ cranial window for in vivo imaging! \U0001F9E0\U0001F52C\""
   description: Intravital workshop 15/11/2024
   first_author: Vermaercke, Ben
   id: '14641777'
